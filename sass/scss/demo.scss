@@ -1,0 +1,298 @@
+/*Reseteo de CSS*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html { height: 101%; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+strong { font-weight: bold; }
+table { border-collapse: collapse; border-spacing: 0; }
+img { border: 0; max-width: 100%; }
+
+/*Codigo main CSS*/
+html { /*tipografia de la pagina*/
+  font-family: 'Inter', sans-serif !important;
+}
+
+/*Backgrounds para todas los html*/
+.background {
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+}
+.background-index {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../images/fondo.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.background-socios {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../images/fondo1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/*Personalizacion Navbar*/
+.navbar {
+  background-color: black;
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+/*Elementos de pagina principal*/
+#logo { /*insert de logo*/
+  height: 100px;
+  width: 100px;
+}
+#landing {
+  text-align: center;
+}
+.textoIndex {
+  color: white;
+  text-align: left;
+}
+.pd10px {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/*Posicionamiento del pie de pagina*/
+.footer {
+  display: inline-grid;
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  width: 100%;
+  background-color: black;
+  li {
+    text-align: center;
+    color: white;
+    display: block;
+  }
+}
+.footerRelative {
+  position: relative;
+}
+
+/*Remover bordes a los fieldset y dar formato*/
+fieldset {
+  border: 0;
+  margin: 50px;
+  h2 {
+    font-size: 48px;
+    font-weight: bolder;
+    color: black;
+  }
+}
+.login h2 {
+  color: white;
+}
+textarea {
+  resize: none;
+  font-family: sans-serif;
+  text-indent: 10px;
+  text-align: justify;
+  margin-bottom: 10px;
+}
+/*Diseno de recuadros del login*/
+.input {
+  border: none;
+  padding: 15px 25px;
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.inputContacto {
+  padding: 15px 25px;
+  margin-bottom: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+/*Flexbox*/
+
+.sociosFlex {
+  padding-top: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+.nosotrosFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: justify;
+}
+.flexcontainer{
+  padding: 10px;
+}
+.columnaFlex {
+  display: flex;
+  text-align: justify;
+  flex-direction: column;
+  padding: 200px;
+}
+.contactoFlex {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+/*Grids*/
+#grid {
+  display: grid;
+  grid-template-areas:
+  "menu"
+  "landing"
+  "footer";
+  grid-row-gap: 250px;
+}
+footer{
+  grid-area: footer;
+}
+main#landing {
+  grid-area: landing;
+}
+nav {
+  grid-area: menu;
+}
+#actividades-grid {
+  display: grid;
+  grid-template-areas:
+  "menu"
+  "carousel-grid"
+  "footer"
+}
+.carousel-grid {
+  grid-area: carousel-grid;
+}
+
+/*Customizaciones varias*/
+.bordesRedondeados {
+  border-radius: 15px;
+}
+.blancoNegro {
+  filter: grayscale(100%);
+}
+.blancoNegro:hover {
+  filter: none;
+}
+.nosotros-titulo {
+  color: grey;
+}
+#formulario {
+  color: white;
+  text-align: center;
+  align-items: center;
+}
+.border {
+  border: 5px solid black;
+  padding: 10px;
+}
+
+/*diseno de botones, todos iguales por ahora*/
+.button {
+  background-color: rgb(40, 48, 56);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition: all 2;
+}
+.button:hover {
+  background-color: rgb(226, 228, 22)
+}
+
+/*MEDIA QUERIES*/
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1224px) {
+  .navbar {
+    padding-left: 200px;
+    li {
+      padding-left: 20px;
+    }
+    a {
+      padding: 50px 16px;
+    }
+  }
+  .footer {
+    padding: 14px 16px;
+  }
+  #landing {
+    padding-left: 100px;
+    text-align: left;
+  }
+  .nosotrosFlex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: justify;
+  }
+  .contactoFlex {
+    flex-direction: row;
+  }
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px) and (max-device-width : 480px) {
+}
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+  /* Styles */
+}
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+  /* Styles */
+}
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  /* Styles */
+}
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  /* Styles */
+}
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  /* Styles */
+}
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) {
+  /* Styles */
+}
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+  /* Styles */
+}
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min-device-pixel-ratio:1.5) {
+  /* Styles */
+}
